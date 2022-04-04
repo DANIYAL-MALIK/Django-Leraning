@@ -1,0 +1,8 @@
+{% if user.is_authenticated %}
+    <ul class="menu">
+    <li>
+        <a href="{% url 'login:dashborad' %}">My Dashboard</a>
+        <a href="{% url 'login:logout' %}">Logout</a>
+    </li>
+    </ul>
+{% endif %}
