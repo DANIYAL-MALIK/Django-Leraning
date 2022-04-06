@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MY API</title>
+</head>
+<body>
+{% for post in data %}
+ <h1>{{ post.title }}</h1>
+ <h6>{{ post.content }}</h6>
+{% endfor %}
+</body>
+</html>
