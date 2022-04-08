@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+{% block title %}
+<title>{{post.title}}</title>
+{% endblock title %}
+{% block content %}
+<div class="container">
+<div class="row">
+<div class="col-12 pt-5">
+    <img src="{{post.image.url}}" height="400px;" width="300px" class="card-img-top" alt="...">
+    <h2>{{post.title}}</h2>
+    <p>{{post.excerpet}}</p>
+    <address>{{post.published}}</address>
+</div>
+</div>
+</div>
+{% endblock content %}

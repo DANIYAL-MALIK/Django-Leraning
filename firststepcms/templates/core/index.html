@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+{% block title %}
+<title>Home Page</title>
+{% endblock title %} 
+
+{% block content %}
+
+<div class="album py-5 bg-light">
+<div class="container">
+    <div class="row">
+        {% for core in index %}
+        <div class="card mb-4" style="width: 18rem;margin:20px;">
+            <img src="{{core.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{core.title}}</h5>
+              <p class="card-text">{{core.published}}</p>
+              <a href="{{core.get_absolute_url}}" class="btn btn-primary">view detail</a>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+</div>
+</div>
+
+{% endblock content %}

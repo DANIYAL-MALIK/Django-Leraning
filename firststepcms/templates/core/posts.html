@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+{% block title %}
+<title>Manager's Page</title>
+{% endblock title %} 
+{% block content %}
+<a style="margin:20px;" href="{% url 'core:add' %}" class="btn btn-primary">Add a new Post</a>
+<div class="album py-5 bg-light">
+<div class="container">
+    <div class="row">
+        {% for i in post_list %}
+        <div class="card mb-4" style="width: 18rem;margin:20px;">
+            <img src="{{i.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{i.title}}</h5>
+              <p class="card-text">{{i.published}}</p>
+              <a href="{{i.get_absolute_url}}" class="btn btn-primary">Update Posts</a>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+</div>
+</div>
+
+{% endblock content %}
